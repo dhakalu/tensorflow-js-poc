@@ -28,3 +28,12 @@ But at differnt times we would want to update the data in tensor to adjust the n
 
 We can perfoem different operations on a tensor. To see a comprensive list of different things that we can do on a tensor
 check out [this link](https://js.tensorflow.org/api/latest/#Operations)
+
+In a simple example below, we are performing element wise addition of two elements. Notice we are not calling `tf.add` rather we are calling `add` on the `Tensor` object we created i.e. these operations are functions available on `Tensor` class.
+
+```javascript
+    import * as tf from '@tensorflow/tfjs';
+    const tensor = tf.create([1, 2, 3, 4, 5]);
+    const tensor2 = tf.create([6, 7, 8, 9, 10]);
+    const sum = tensor.add(tensor2);
+```
